@@ -1,0 +1,11 @@
+%html
+%head
+  %meta{"charset" => "utf-8"}
+  %title yummyyumyum
+  %link{:rel => "stylesheet", :href => "http://yui.yahooapis.com/pure/0.4.2/pure-min.css"}
+  %link{:rel => :stylesheet, :href => "/styles.css"}
+%body
+  .pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+    %ul
+      %li <a href="/recipes">H O M E</a>
+  = yield

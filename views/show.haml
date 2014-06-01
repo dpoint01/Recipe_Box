@@ -1,0 +1,44 @@
+.container
+  .pure-g-r
+    .pure-u-1-1
+      %h1.name-centered= @recipe_info[0]["name"]
+
+      %table.pure-table.table-centered.bottom
+        %thead
+          %tr
+            %th.name-centered I N G R E D I E N T S
+        %tbody
+        - @ingredients.each do |ingredient|
+          %tr
+            %td= ingredient["name"]
+
+
+
+      %table.pure-table.table-centered
+        %thead
+          %tr
+            %th I N S T R U C T I O N S
+            %th D E S C R I P T I O N
+        %tbody
+          %tr
+          -if @recipe_info[0]["instructions"] != nil
+            %td= @recipe_info[0]["instructions"]
+          -else
+            %td N O    I N S T R U C T I O N S    A V A I L A B L E
+          -if @recipe_info[0]["description"] != nil
+            %td= @recipe_info[0]["description"]
+          -else
+            %td N O   D E S C R I P T I O N    A V A I L A B L E
+
+
+
+
+
+
+
+
+
+
+
+
+
